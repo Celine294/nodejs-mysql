@@ -4,6 +4,9 @@ pipeline {
     stages {
         stage('npm build') {
             steps {
+                //Docker() 
+                //bat 'docker build .'
+                dir 'sampleapp'
                 bat 'npm install'
                 bat 'npm start'
             }
