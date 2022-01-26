@@ -6,9 +6,10 @@ pipeline {
             steps {
                 //Docker() 
                 //bat 'docker build .'
-                dir 'sampleapp'
-                bat 'npm install'
-                bat 'npm start'
+                dir('sampleapp') {
+                    bat 'npm install'
+                    bat 'npm start'
+                }
             }
         }
     }
